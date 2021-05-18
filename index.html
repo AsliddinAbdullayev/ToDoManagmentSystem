@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>2-code</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+</head>
+<body>
+<div class="d-flex justify-content-end mt-4 mr-4">
+
+    <button class="btn btn-success" data-toggle="modal" data-target="#exampleModal">
+        <h4>Add +</h4>
+    </button>
+</div>
+
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+     aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+
+            <div class="modal-body border-0">
+                <div class="modal-header border-0">
+
+                    <h4 class="text-center">ADD Task</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="card border-0">
+
+                    <div class="card-body">
+                        <form name="task-form">
+                            <textarea class="form-control mb-3" placeholder="Task" name="task" rows="3"></textarea>
+
+                            <select name="staff" class="form-control">
+                                <option value="">Slect staff</option>
+                                <option value="Ali">Ali</option>
+                                <option value="Vali">Vali</option>
+                                <option value="Sobir">Sobir</option>
+                                <option value="Hamid">Hamid</option>
+                            </select>
+                            <label for="start-date" class="mt-3"><h5>Start-date</h5></label>
+                            <input type="date" class="form-control mb-3" name="start-date">
+                            <label for="finish-date"><h5>Finish-date</h5></label>
+                            <input type="date" class="form-control mb-3" name="finish-date">
+                            <select name="state" class="form-control mb-3">
+                                <option value="">Selected</option>
+                                <option value="pending">Pending</option>
+                                <option value="doing">Doing</option>
+
+                            </select>
+                            <button type="button" onclick="addTask()" class="btn btn-primary btn-block">
+                                Add
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+<section>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <h2 class=" text-center mt-3">ToDo Management System</h2>
+            </div>
+
+            <div class="col-lg-3 mt-3 my-lg-5">
+                <div class="card">
+                    <div class="card-header bg-primary text-white">
+                        <h5>Pending</h5>
+                    </div>
+
+                </div>
+                <div id="pending-list">
+                </div>
+
+            </div>
+            <div class="col-lg-3 mt-3 my-lg-5">
+                <div class="card">
+                    <div class="card-header bg-warning text-white">
+                        <h5>Doing</h5>
+                    </div>
+                    <div id="doing-list">
+
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-lg-3 mt-3 my-lg-5">
+                <div class="card">
+                    <div class="card-header bg-success text-white">
+                        <h5>Done</h5>
+                    </div>
+                    <div id="done-list">
+
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-lg-3 mt-3 my-lg-5">
+                <div class="card">
+                    <div class="card-header bg-secondary text-white">
+                        <h5>Rejected</h5>
+                    </div>
+                    <div id="rejected-list">
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+
+</body>
+<script src=" js/jquery-3.3.1.slim.min.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/index.js"></script>
+</html>
